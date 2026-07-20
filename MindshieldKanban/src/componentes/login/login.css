@@ -1,0 +1,85 @@
+
+.Login{
+	position: fixed;
+	min-height: 30vh;
+	max-width: 420px;
+	padding: 28px 26px;
+	background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(245,245,255,0.95));
+	border-radius: 12px;
+	box-shadow: 0 8px 24px rgba(18, 25, 40, 0.12);
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	align-items: stretch;
+	z-index: 9999;
+}
+
+.Login h2{
+	margin: 0;
+	font-size: 1.35rem;
+	color: #102a43;
+	text-align: center;
+}
+
+.Login p{
+	margin: 0;
+	color: #334e68;
+	font-size: 0.95rem;
+	text-align: center;
+}
+
+.Login input{
+	padding: 12px 14px;
+	border-radius: 8px;
+	border: 1px solid #000000;
+	outline: none;
+	font-size: 0.98rem;
+	background: #fff;
+	transition: box-shadow 120ms ease, border-color 120ms ease;
+  color: #000000;
+}
+
+.Login input:focus{
+	border-color: #5b8def;
+	box-shadow: 0 4px 10px rgba(91,141,239,0.12);
+}
+
+.Login button{
+	margin-top: 6px;
+	padding: 12px 16px;
+	border-radius: 10px;
+	border: none;
+	background-color: #334e68;
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 120ms ease, opacity 120ms ease;
+  transition: all .4s;
+}
+
+.drag-handle{
+	cursor: grab;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.drag-handle:active{
+	cursor: grabbing;
+}
+
+.Login button:hover{
+	transform: translateY(-2px);
+	opacity: 0.98;
+  background-color: #476e92;
+}
+
+@media (max-width: 480px){
+	.Login{
+		min-height: auto;
+		max-width: calc(100% - 32px);
+		padding: 20px;
+		border-radius: 8px;
+	}
+	.Login h2{font-size:1.15rem}
+}
+
