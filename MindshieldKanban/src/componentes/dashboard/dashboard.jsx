@@ -457,35 +457,11 @@ function Dashboard() {
                     ))}
                   </div>
                 </div>
-                <div className="detail-section">
-                  <h4>Historial de actividad</h4>
-                  <ul className="activity-list">
-                    {selectedTask.activity.map((item, index) => (
-                      <li key={`${item}-${index}`}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
+                
               </>
             ) : (
               <p className="detail-copy">Haz clic en una tarea para ver su detalle, comentarios y actividad.</p>
             )}
-          </div>
-
-          <div className="card">
-            <div className="card-title-row">
-              <div>
-                <p className="eyebrow">Actividad</p>
-                <h3>Historial reciente</h3>
-              </div>
-            </div>
-            <ul className="activity-list"> 
-              {activityFeed.map((item) => (
-                <li key={item.id}>
-                  <span>{item.text}</span>
-                  <small>{item.time}</small>
-                </li>
-              ))}
-            </ul>
           </div>
         </aside>
       </section>

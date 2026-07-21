@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from 'react'
 import './login.css'
 
 export default function Login() {
+  const navigate = useNavigate()
+
   const cardRef = useRef(null)
   const draggingRef = useRef(false)
   const offsetRef = useRef({ x: 0, y: 0 })
@@ -52,6 +55,9 @@ export default function Login() {
   }
 
   return (
+
+
+
     <div
       ref={cardRef}
       className='Login'
@@ -62,7 +68,11 @@ export default function Login() {
         <p>Ingresa tu código de usuario para acceder al Dashboard</p>
       </div>
       <input type="text" name="" id="" placeholder='Codigo de usuario' />
-      <button>Acceder</button>
+
+      <button onClick={function () {
+        navigate("/dashboard")
+      }}>Acceder</button>
+
     </div>
   )
 }
